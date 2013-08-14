@@ -3,7 +3,7 @@ socketTest
 
 An http service test using sockets to demonstrate an issue with Ploy and sockets when the service is an http service.
 
-== Steps to reproduce ==
+### Steps to reproduce
 * Clone this project
 * Add an alias to your /etc/hosts like sioTest.anydomain.com
 * Add a remote ploy server (git remote add development http://beep:boop@localhost/_ploy/socketTest.git)
