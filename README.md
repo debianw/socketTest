@@ -1,7 +1,7 @@
 socketTest
 ==========
 
-An http service test using sockets to demonstrate an issue with Ploy and sockets when the service is an http service.
+An http service test using sockets to replicate an issue with Ploy and sockets when the service is an http service.
 
 ### Steps to reproduce
 * Clone this project
