@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Socket.io Test</title>
+    </head>
+
+    <body>
+        
+        <h1>Socket.io Test</h1>
+
+        <script src="http://siotest.vfa.io/socket.io/socket.io.js"></script>
+
+        <script type="text/javascript">
+            
+            var body = document.querySelector('body');
+
+            var socket = io.connect('http://siotest.vfa.io');
+
+            socket.on('connected', function (data) {
+                var el = document.createElement('div');
+                el.innerHTML = data.message;
+                
+                body.appendChild(el);
+
+                console.log('data: ', data);
+
+                setInterval(function () {
+                    socket.emit('my other event', {
+                        my: 'data'
+                    });
+                }, 2000);
+
+                socket.on('data received', function (data) {
+                  console.log("data received: ", data.date);
+                });
+            });
+        </script>
+    </body>
+</html>

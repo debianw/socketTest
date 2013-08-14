@@ -1,0 +1,13 @@
+{
+	"name": "sioTest",
+	"description": "Socket.io Test",
+	"dependencies": {
+		"express": "3.3.1",
+		"socket.io": "*"
+	},
+	"scripts": {
+	  "start": {
+	    "siotest": "node siotest"
+    }
+	}
+}
